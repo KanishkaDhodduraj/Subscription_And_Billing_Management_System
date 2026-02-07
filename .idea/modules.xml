@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Billing_Management/Billing_Management.iml" filepath="$PROJECT_DIR$/Billing_Management/Billing_Management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Subscription_And_Billing_Management_System.iml" filepath="$PROJECT_DIR$/.idea/Subscription_And_Billing_Management_System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Subscription_Plans/Subscription_Plans.iml" filepath="$PROJECT_DIR$/Subscription_Plans/Subscription_Plans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Transaction_Management/Transaction_Management.iml" filepath="$PROJECT_DIR$/Transaction_Management/Transaction_Management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User_Module/User_Module.iml" filepath="$PROJECT_DIR$/User_Module/User_Module.iml" />
+    </modules>
+  </component>
+</project>
