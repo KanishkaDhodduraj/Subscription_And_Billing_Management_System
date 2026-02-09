@@ -4,11 +4,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("=== Create Subscription Plan ===");
+        System.out.println(" Create Subscription Plan ");
 
         System.out.print("Enter Plan ID: ");
         int planId = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+        scanner.nextLine();
 
         System.out.print("Enter Plan Name: ");
         String name = scanner.nextLine();
@@ -23,7 +23,7 @@ public class Main {
         System.out.print("Enter Description: ");
         String description = scanner.nextLine();
 
-        System.out.println("\n=== Plan Created Successfully ===");
+        System.out.println("\n Plan Created Successfully ");
         System.out.println("ID          : " + planId);
         System.out.println("Name        : " + name);
         System.out.println("Price/Month : " + pricePerMonth);

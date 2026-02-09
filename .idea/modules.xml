@@ -6,8 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/Subscription_Plans/PlanType/PlanType.iml" filepath="$PROJECT_DIR$/Subscription_Plans/PlanType/PlanType.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Subscription_And_Billing_Management_System.iml" filepath="$PROJECT_DIR$/.idea/Subscription_And_Billing_Management_System.iml" />
       <module fileurl="file://$PROJECT_DIR$/Subscription_Plans/Subscription_Plans.iml" filepath="$PROJECT_DIR$/Subscription_Plans/Subscription_Plans.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Transaction_Management/Transaction_Management.iml" filepath="$PROJECT_DIR$/Transaction_Management/Transaction_Management.iml" />
-      <module fileurl="file://$PROJECT_DIR$/User_Module/User_Module.iml" filepath="$PROJECT_DIR$/User_Module/User_Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User_Subscription/User_Subscription.iml" filepath="$PROJECT_DIR$/User_Subscription/User_Subscription.iml" />
       <module fileurl="file://$PROJECT_DIR$/Subscription_Plans/com.kanishka.billing.plans/com.kanishka.billing.plans.iml" filepath="$PROJECT_DIR$/Subscription_Plans/com.kanishka.billing.plans/com.kanishka.billing.plans.iml" />
     </modules>
   </component>
