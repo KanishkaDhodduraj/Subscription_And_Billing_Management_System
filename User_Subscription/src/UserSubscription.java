@@ -19,11 +19,8 @@ public class UserSubscription {
     }
 
     public void printAssignment() {
-        System.out.println("\n USER DETAILS");
-        System.out.println("User ID : " + user.getId());
-        System.out.println("User Name : " + user.getName());
-        System.out.println("User Email : " + user.getEmail());
-        System.out.println("Assigned Plan: " + getPlanType().name());
-        System.out.println("Status  : " + getStatus());
+        System.out.printf("ID:%d|%s|%-8s|%s%n", user.getId(),user.getName(),planType.name() ,status);
     }
+
+
 }
