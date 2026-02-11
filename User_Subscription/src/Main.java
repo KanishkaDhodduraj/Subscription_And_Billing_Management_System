@@ -35,7 +35,7 @@ public class Main{
 
         }
 
-        UserSubscription assignment=new UserSubscription(user,plan,"Active plan");
+        UserSubscription assignment=new UserSubscription(user,plan);
 
         assignment.printAssignment();
 
