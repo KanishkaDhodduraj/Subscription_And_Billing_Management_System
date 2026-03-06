@@ -1,20 +1,28 @@
-public class SubscriptionManager{
-    public static void main(String[] args){
+public class SubscriptionManager {
+    private static UserSubscription[] subscriptions = new UserSubscription[100];
+    private static int userCount = 0;
 
+    public static void main(String[] args) {
+        System.out.println("SUBSCRIPTION & USAGE BILLING SYSTEM ");
 
-        User user1 =new User(101, "Kanishka", "kanishka@email.com");
-        User user2 =new User(102, "Reenu", "reenu@email.com");
+        subscriptions[userCount++] = new UserSubscription(new User(101, "Kanishka", "kanishka@email.com"), PlanType.SILVER);
+        subscriptions[userCount++] = new UserSubscription(new User(102, "Reenu", "reenu@email.com"), PlanType.BASIC);
 
-        UserSubscription sub1=new UserSubscription(user1,PlanType.GOLD);
-        UserSubscription sub2=new UserSubscription(user2,PlanType.SILVER);
+        testUsageTracking();
 
-        sub1.renewSubcription(3);
-        sub2.upgradePlan(PlanType.GOLD);
+        UsageTracker.generateUsageReport(subscriptions, userCount);
 
-        sub1.printAssignment();
-        sub2.printAssignment();
+    }
+    public static void testUsageTracking() {
+        System.out.println("TESTING USAGE TRACKING:");
 
-        System.out.println("Revenue : " +(sub1.isExpired()? 0 : 999)+" per months");
+        //Kanishka heavy usage -> Needs GOLD
+        UsageTracker.addUsage(subscriptions[0], 60);  // SILVER → GOLD recommendation
+        subscriptions[0].renewSubcription(3);
+        subscriptions[0].printAssignment();
 
+        //Reenu light usage ->OK on BASIC
+        UsageTracker.addUsage(subscriptions[1], 8);   // Stays BASIC
+        subscriptions[1].printAssignment();
     }
 }

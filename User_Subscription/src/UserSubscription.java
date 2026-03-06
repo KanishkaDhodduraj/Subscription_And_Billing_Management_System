@@ -5,14 +5,16 @@ public class UserSubscription {
     private String renewalDate;
     private int activeMonths;
     private double totalSpent;
+    private int usageUnits = 0;
 
-    public UserSubscription(User user, PlanType planType) {
+    public UserSubscription(User user,PlanType planType) {
         this.user = user;
         this.planType = planType;
         this.status = "ACTIVE";
         this.renewalDate = "2026-02-10";
         this.activeMonths = 1;
         this.totalSpent = planType.getPrice();
+        this.usageUnits = 0;
     }
 
     public void renewSubcription(int months) {
@@ -25,27 +27,37 @@ public class UserSubscription {
     public boolean isExpired() {
         return renewalDate.compareTo("2026-02-10") < 0;
     }
+
     public void upgradePlan(PlanType newPlan) {
         if (newPlan != null) {
             this.planType = newPlan;
-
             System.out.println("Upgraded Plan : " + newPlan.name());
         }
     }
 
-    public PlanType getPlanType(){
+    public User getUser() {
+        return user;
+    }
+
+
+    public PlanType getPlanType() {
         return planType;
     }
 
-    public String getStatus()
-    {
-
+    public String getStatus() {
         return status;
     }
 
-    public void printAssignment() {
-        System.out.printf("ID:%d | %s| %-8s| %s%n", user.getId(),user.getName(),planType.name() ,status);
+    public int getUsageUnits() {
+        return usageUnits;
     }
 
+    public void setUsageUnits(int units) {
+        this.usageUnits = units;
+    }
 
+    public void printAssignment() {
+        System.out.printf("ID:%d | %-10s | %-8s | %s | Usage: %d units | ₹%.0f total%n",
+                user.getId(), user.getName(), planType.name(), status, usageUnits, totalSpent);
+    }
 }

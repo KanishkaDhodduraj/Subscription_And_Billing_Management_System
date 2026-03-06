@@ -12,6 +12,4 @@ public enum PlanType {
     public int getPrice(){
         return price;
     }
-
-
 }
