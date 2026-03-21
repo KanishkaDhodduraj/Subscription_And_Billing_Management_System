@@ -12,7 +12,6 @@ public class UsageTracker {
             System.out.println("RECOMMEND : Upgrade to " + recommended.name() + (" Limit :" + TIER_LIMITS[recommended.ordinal()] + " Units)"));
         }
     }
-
     public static PlanType getRecommendedTier(int usage) {
         if (usage <= 10) return PlanType.BASIC;
         if (usage <= 50) return PlanType.SILVER;
@@ -28,7 +27,6 @@ public class UsageTracker {
             String status = sub.getUsageUnits() > TIER_LIMITS[sub.getPlanType().ordinal()] ? "OVERAGE!" : "OK";
             System.out.printf("ID:%d %-10s %4d units | %s | %s%n",
                     sub.getUser().getId(), sub.getUser().getName(), sub.getUsageUnits(), sub.getPlanType(), status);
-
         }
     }
 

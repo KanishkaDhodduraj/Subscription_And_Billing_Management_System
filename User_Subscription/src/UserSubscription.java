@@ -17,15 +17,35 @@ public class UserSubscription {
         this.usageUnits = 0;
     }
 
-    public void renewSubcription(int months) {
+    public void renewSubscription(int months) {
         this.activeMonths += months;
-        this.renewalDate = "2026-" + (5 + months) + "-10";
+        this.status = "ACTIVE";
         this.totalSpent += planType.getPrice() * months;
-        System.out.println("Your Subscription is Renewed " + months + " months");
+        System.out.println("  " + user.getName() + " renewed " + months + " months!");
     }
 
     public boolean isExpired() {
-        return renewalDate.compareTo("2026-02-10") < 0;
+
+        //if activemonths <= 0 is, expired
+
+        if(activeMonths <= 0) {
+            status = "EXPIRED";
+            return true;
+        }
+        return false;
+    }
+    public void updateRenewals() {
+        if(activeMonths <= 0) {
+            status = "EXPIRED";
+            System.out.println(" " + user.getName() + " EXPIRED!");
+        } else {
+            activeMonths--;
+            System.out.println(" " + user.getName() + " - " + activeMonths + " months left");
+        }
+    }
+
+    public double getTotalSpent() {
+        return totalSpent;
     }
 
     public void upgradePlan(PlanType newPlan) {
@@ -59,5 +79,13 @@ public class UserSubscription {
     public void printAssignment() {
         System.out.printf("ID:%d | %-10s | %-8s | %s | Usage: %d units | ₹%.0f total%n",
                 user.getId(), user.getName(), planType.name(), status, usageUnits, totalSpent);
+    }
+
+    public int getActiveMonths() {
+        return activeMonths;
+    }
+
+    public void setActiveMonths(int activeMonths) {
+        this.activeMonths = activeMonths;
     }
 }

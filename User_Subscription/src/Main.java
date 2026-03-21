@@ -37,6 +37,12 @@ public class Main{
 
         UserSubscription assignment=new UserSubscription(user,plan);
 
+        System.out.print("\n Renew for how many months ? (0=No): ");
+        int months = scanner.nextInt();
+        if(months > 0) {
+            assignment.renewSubscription(months);
+        }
+
         assignment.printAssignment();
 
         scanner.close();
