@@ -1,0 +1,6 @@
+==== INVOICE ====
+Customer: Kanishka
+Plan: Premium Plan
+Amount: ₹499.0
+Date: 2026-05-05
+=================

@@ -1,0 +1,6 @@
+==== INVOICE ====
+Customer: Rahul
+Plan: Basic Plan
+Amount: ₹199.0
+Date: 2026-05-05
+=================
