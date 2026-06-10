@@ -12,7 +12,7 @@ public class PaymentProcessor {
     private static String[] paymentStatuses = new String[MAX_PAYMENTS];
     private static int paymentCount = 0;
 
-    // ✅ SIMPLE PAYMENT METHOD
+
     public static String processPayment(String customerName, String planName, double amount) {
 
         if (paymentCount >= MAX_PAYMENTS) {
@@ -27,7 +27,7 @@ public class PaymentProcessor {
         System.out.println("Plan: " + planName);
         System.out.println("Amount: ₹" + amount);
 
-        // ✅ RANDOM PAYMENT STATUS
+
         Random rand = new Random();
         int statusCheck = rand.nextInt(100);
 
@@ -41,13 +41,13 @@ public class PaymentProcessor {
             status = "FAILED";
         }
 
-        // ✅ STORE DATA
+
         paymentIds[paymentCount] = invoiceId;
         paymentAmounts[paymentCount] = amount;
         paymentStatuses[paymentCount] = status;
         paymentCount++;
 
-        // ✅ SUCCESS → GENERATE INVOICE
+
         if (status.equals("SUCCESS")) {
 
             System.out.println("SUCCESS");
@@ -68,7 +68,7 @@ public class PaymentProcessor {
         return invoiceId;
     }
 
-    // ✅ VIEW ALL PAYMENTS
+
     public static void showAllPayments() {
 
         System.out.println("\nALL PAYMENTS");

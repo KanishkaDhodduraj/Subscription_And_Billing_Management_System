@@ -10,7 +10,7 @@ public class InvoiceGenerator {
         String folderPath = "invoices";
         File folder = new File(folderPath);
 
-        // ✅ CREATE FOLDER IF NOT EXISTS
+
         if (!folder.exists()) {
             folder.mkdir();
         }

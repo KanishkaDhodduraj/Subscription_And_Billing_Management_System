@@ -1,7 +1,7 @@
 package billing;
 
-import User_Subscription.UserSubscription;
-import User_Subscription.PlanType;
+import UserSubscription.UserSubscription;
+import UserSubscription.PlanType;
 
 import billing.Invoice;
 import billing.InvoiceGenerator;
@@ -18,7 +18,7 @@ public class PaymentProcessor {
     private static int[] paymentUserIds = new int[MAX_PAYMENTS]; // ✅ track user
     private static int paymentCount = 0;
 
-    // ✅ PROCESS PAYMENT
+    //  PROCESS PAYMENT
     public static String processPayment(UserSubscription sub, double amount, String method) {
 
         if (paymentCount >= MAX_PAYMENTS) {
@@ -32,7 +32,7 @@ public class PaymentProcessor {
         System.out.println("User: " + sub.getUser().getName());
         System.out.println("Amount: ₹" + amount);
 
-        // ✅ payment logic
+        //  payment logic
         String status;
         boolean success = false;
         double randomCheck = Math.random() * 100;
@@ -46,21 +46,21 @@ public class PaymentProcessor {
             status = "FAILED";
         }
 
-        // ✅ store data
+        //  store data
         paymentIds[paymentCount] = invoiceId;
         paymentAmounts[paymentCount] = amount;
         paymentStatuses[paymentCount] = status;
         paymentUserIds[paymentCount] = sub.getUser().getId(); // ✅ link user
         paymentCount++;
 
-        // ✅ SUCCESS FLOW
+        //  SUCCESS FLOW
         if (success) {
             double newTotal = sub.getTotalSpent() + amount;
             sub.setTotalSpent(newTotal);
 
             System.out.println("SUCCESS | New Balance: ₹" + newTotal);
 
-            // ✅ INVOICE GENERATION
+            //  INVOICE GENERATION
             Invoice invoice = new Invoice(
                     sub.getUser().getName(),
                     sub.getPlanType().name(),
@@ -77,7 +77,7 @@ public class PaymentProcessor {
         return invoiceId;
     }
 
-    // ✅ REVENUE REPORT
+    //  REVENUE REPORT
     public static void generateRevenueReport(UserSubscription[] subscriptions, int userCount) {
 
         double totalRevenue = 0;
@@ -115,7 +115,7 @@ public class PaymentProcessor {
         System.out.println(summary);
     }
 
-    // ✅ UPGRADE WITH PAYMENT
+    //  UPGRADE WITH PAYMENT
     public static boolean upgradeWithPayment(UserSubscription sub, PlanType newPlan) {
 
         double oldPrice = sub.getPlanType().getPrice();
@@ -139,29 +139,3 @@ public class PaymentProcessor {
 
         return false;
     }
-
-    // ✅ SEARCH PAYMENTS (FIXED)
-    public static void searchPayments(int userId) {
-
-        System.out.println("\nPAYMENTS FOR USER ID: " + userId);
-        boolean found = false;
-
-        for (int i = 0; i < paymentCount; i++) {
-
-            if (paymentUserIds[i] == userId) {
-
-                String status = paymentStatuses[i].equals("SUCCESS") ? "Yes" : "No";
-
-                System.out.println(
-                        paymentIds[i] + " | ₹" + paymentAmounts[i] + " | Paid: " + status
-                );
-
-                found = true;
-            }
-        }
-
-        if (!found) {
-            System.out.println("No payments found");
-        }
-    }
-}
