@@ -7,15 +7,15 @@ import java.util.ArrayList;
 public class RevenueService {
     public RevenueReport generateRevenue(ArrayList<BillingRecord> records) {
 
-        double total = 0;
+        double totalRevenue = 0;
 
         for(BillingRecord record : records) {
 
             if(record.getPaymentStatus().equalsIgnoreCase("PAID")) {
-                total += record.getAmount();
+                totalRevenue += record.getAmount();
             }
         }
 
-        return new RevenueReport(total);
+        return new RevenueReport(totalRevenue);
     }
 }

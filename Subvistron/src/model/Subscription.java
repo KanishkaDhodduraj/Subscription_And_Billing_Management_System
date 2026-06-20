@@ -32,6 +32,10 @@ public class Subscription {
         System.out.println("Auto Renewal : " + autoRenew);
     }
 
+    public boolean isAutoRenew() {
+        return autoRenew;
+    }
+
 
     public void displaySubscription() {
 
