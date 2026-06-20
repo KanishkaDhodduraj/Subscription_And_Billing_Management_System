@@ -1,11 +1,22 @@
 package service;
 
 import model.User;
+import java.util.ArrayList;
 
 public class LoginService {
+    public User login(ArrayList<User> users, String email,
+            String password) {
+        for(User user : users) {
 
-    public boolean login(User user, String email, String password) {
+            if(user.getEmail().equals(email)
+                    &&
+                    user.getPassword().equals(password)) {
 
-        return user.getEmail().equals(email);
+                return user;
+            }
+        }
+
+        return null;
+
     }
 }
