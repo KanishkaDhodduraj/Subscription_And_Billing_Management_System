@@ -1,3 +1,5 @@
+package test;
+
 import dao.UserDAO;
 import model.Role;
 import model.User;

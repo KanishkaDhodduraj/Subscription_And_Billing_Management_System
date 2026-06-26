@@ -1,3 +1,5 @@
+package test;
+
 import database.DBConnection;
 import java.sql.Connection;
 

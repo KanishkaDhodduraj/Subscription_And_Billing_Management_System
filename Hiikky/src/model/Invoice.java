@@ -21,12 +21,8 @@ public class Invoice {
         this.paymentMethod = paymentMethod;
         this.paymentStatus = paymentStatus;
     }
-
     public void displayInvoice() {
-
-        System.out.println("\n ========== SUBVISTRON ========== ");
         System.out.println("Invoice No. : " + invoiceNo);
-
         System.out.println("\nCUSTOMER DETAILS");
         System.out.println("User ID : " + user.getUserId());
         System.out.println("Name    : " + user.getName());
