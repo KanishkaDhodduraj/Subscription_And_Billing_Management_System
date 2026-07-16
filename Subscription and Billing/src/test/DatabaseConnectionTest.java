@@ -11,11 +11,11 @@ public class DatabaseConnectionTest {
 
         if(con != null) {
 
-            System.out.println("Database Connected Successfully");
+            System.out.println("Database is Connected Successfully");
 
         } else {
 
-            System.out.println("Connection Failed");
+            System.out.println("Connection is Failed");
         }
     }
 }

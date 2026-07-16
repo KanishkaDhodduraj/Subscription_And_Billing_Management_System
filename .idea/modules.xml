@@ -4,12 +4,14 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Billing_Management/Billing_Management.iml" filepath="$PROJECT_DIR$/Billing_Management/Billing_Management.iml" />
       <module fileurl="file://$PROJECT_DIR$/Subscription_Plans/PlanType/PlanType.iml" filepath="$PROJECT_DIR$/Subscription_Plans/PlanType/PlanType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Subscription and Billing/Subscription and Billing.iml" filepath="$PROJECT_DIR$/Subscription and Billing/Subscription and Billing.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Subscription_And_Billing_Management_System.iml" filepath="$PROJECT_DIR$/.idea/Subscription_And_Billing_Management_System.iml" />
       <module fileurl="file://$PROJECT_DIR$/Subscription_Plans/Subscription_Plans.iml" filepath="$PROJECT_DIR$/Subscription_Plans/Subscription_Plans.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Subvistron/Subvistron.iml" filepath="$PROJECT_DIR$/Subvistron/Subvistron.iml" />
       <module fileurl="file://$PROJECT_DIR$/User_Subscription/User_Subscription.iml" filepath="$PROJECT_DIR$/User_Subscription/User_Subscription.iml" />
       <module fileurl="file://$PROJECT_DIR$/Subscription_Plans/com.kanishka.billing.plans/com.kanishka.billing.plans.iml" filepath="$PROJECT_DIR$/Subscription_Plans/com.kanishka.billing.plans/com.kanishka.billing.plans.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Subvistron/src/model/model.iml" filepath="$PROJECT_DIR$/Subvistron/src/model/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hiikky-backend/hiikky-backend.iml" filepath="$PROJECT_DIR$/hiikky-backend/hiikky-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Subscription and Billing/src/model/model.iml" filepath="$PROJECT_DIR$/Subscription and Billing/src/model/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hiikky-backend/src/src.iml" filepath="$PROJECT_DIR$/hiikky-backend/src/src.iml" />
     </modules>
   </component>
 </project>
